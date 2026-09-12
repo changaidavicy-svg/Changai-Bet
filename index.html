@@ -1,14 +1,87 @@
-<!doctype html><html lang="pt"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Changai Bet</title>
-<style>
-body{margin:0;background:#050a12;color:#fff;font-family:Arial,sans-serif}.wrap{max-width:1050px;margin:auto;padding:24px}.logo{font-size:42px;font-weight:900}.logo span,.red{color:#ef233c}.sub{color:#ff5367}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}.card{background:#0b121d;border:1px solid #19304a;border-radius:16px;padding:20px;margin-bottom:16px}.big{font-size:34px;color:#49f3a6;font-weight:800}input{width:100%;padding:13px;box-sizing:border-box;background:#07101a;color:#fff;border:1px solid #29405a;border-radius:10px;margin:8px 0}button{padding:13px 18px;border:0;border-radius:10px;background:#ed1735;color:#fff;font-weight:bold}table{width:100%;border-collapse:collapse}td,th{padding:9px;border-bottom:1px solid #1a2a3d;text-align:left}.warning{color:#ffd98a;border-color:#6d4b15}footer{text-align:center;color:#718096;padding:20px}
-</style></head><body><header class="wrap"><div class="logo">CHANGAI <span>BET</span></div><div class="sub">Changai da Vicy • análise e estatísticas</div></header>
-<main class="wrap"><div class="grid">
-<div class="card"><h2>🤖 Analisador</h2><p>Coloca os últimos multiplicadores separados por vírgulas.</p><input id="nums" placeholder="1.22, 2.10, 5.40, 1.31"><button onclick="go()">ANALISAR</button><div id="msg"></div></div>
-<div class="card"><h2>📊 Estatísticas</h2><p>Média: <b id="avg">—</b></p><p>Maior: <b id="max">—</b></p><p>Menor: <b id="min">—</b></p><p>≥ 2x: <b id="two">—</b></p></div>
-<div class="card"><h2>🎯 Próxima rodada</h2><div class="big">SEM GARANTIA</div><p>O histórico não permite saber antecipadamente o próximo multiplicador.</p></div>
-</div><div class="card"><h2>📈 Histórico</h2><table><thead><tr><th>#</th><th>Multiplicador</th></tr></thead><tbody id="hist"><tr><td colspan="2">Ainda sem dados.</td></tr></tbody></table></div>
-<div class="card warning"><b>⚠️ Joga com responsabilidade.</b><br>O Changai Bet é uma ferramenta de análise. Não garante ganhos, não controla o jogo e não prevê resultados com certeza.</div></main>
-<footer>CHANGAI BET © 2026 • Changai da Vicy</footer>
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Changai Bet — Demo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="logo"><span>♛</span> CHANGAI <b>BET</b><small>A TUA APOSTA, O NOSSO COMPROMISSO</small></div>
+  <input class="search" placeholder="Procurar jogos, ligas ou equipas...">
+  <button>Entrar</button><button class="primary">Registar</button>
+</header>
+<nav>
+  <a class="active">⌂ Início</a><a>⚽ Futebol</a><a>🏀 Basquetebol</a><a>🎾 Ténis</a>
+  <a class="hot">✈ Aviator <i>HOT</i></a><a>🎮 eSports</a><a>🏓 Ténis de Mesa</a><a>🏐 Voleibol</a>
+</nav>
+<main>
+  <aside class="sidebar">
+    <h3>DESPORTOS</h3>
+    <a>🔴 Ao Vivo</a><a>★ Em Destaque</a><a>⚽ Futebol</a><a>🏀 Basquetebol</a><a>🎾 Ténis</a>
+    <a>✈ Aviator <i>HOT</i></a><a>🎮 eSports</a><a>🏓 Ténis de Mesa</a><a>🏐 Voleibol</a><a>🥊 Boxe</a><a>🏎 Fórmula 1</a>
+    <a>••• Mais Desportos</a>
+  </aside>
+
+  <section class="content">
+    <div class="hero">
+      <div>
+        <div class="hero-logo">CHANGAI <b>BET</b></div>
+        <h1>APOSTA EM TODOS OS MOMENTOS</h1>
+        <p>Futebol • Basquetebol • Ténis • Aviator • eSports</p>
+        <button class="primary">JOGAR AGORA</button>
+      </div>
+      <div class="aviator">✈ <strong>Aviator</strong><span>JOGA. MULTIPLICA. LEVANTA.</span></div>
+    </div>
+
+    <div class="sports">
+      <div>⚽<b>Futebol</b><small>Ao vivo: 88</small></div>
+      <div>🏀<b>Basquetebol</b><small>Ao vivo: 18</small></div>
+      <div>🎾<b>Ténis</b><small>Ao vivo: 16</small></div>
+      <div>✈<b>Aviator</b><small>Jogo rápido</small></div>
+      <div>🎮<b>eSports</b><small>Ao vivo: 12</small></div>
+    </div>
+
+    <h2>🔴 APOSTAS AO VIVO <span>LIVE</span></h2>
+    <div class="matches">
+      <div class="match"><div>🔴 56' <strong>Real Madrid vs Marseille</strong><small>Liga dos Campeões</small></div><button data-odd="1.45">1.45</button><button data-odd="4.60">4.60</button><button data-odd="6.20">6.20</button></div>
+      <div class="match"><div>🔴 32' <strong>Manchester City vs Arsenal</strong><small>Premier League</small></div><button data-odd="1.62">1.62</button><button data-odd="3.80">3.80</button><button data-odd="4.75">4.75</button></div>
+      <div class="match"><div>🔴 18' <strong>Lakers vs Golden State Warriors</strong><small>NBA</small></div><button data-odd="1.70">1.70</button><button data-odd="12.00">12.00</button><button data-odd="2.35">2.35</button></div>
+      <div class="match"><div>🔴 25' <strong>Djokovic vs Alcaraz</strong><small>ATP — Ténis</small></div><button data-odd="1.35">1.35</button><button data-odd="3.10">3.10</button></div>
+    </div>
+
+    <div class="tiles">
+      <div>🎰 <strong>CASINO DEMO</strong><small>Jogos de demonstração</small></div>
+      <div>✈ <strong>AVIATOR</strong><small>Voa alto!</small></div>
+      <div>🎰 <strong>SLOTS DEMO</strong><small>Experiência fictícia</small></div>
+      <div>🎮 <strong>eSPORTS</strong><small>Competições</small></div>
+    </div>
+
+    <h2>PRÓXIMOS JOGOS</h2>
+    <div class="upcoming">
+      <div><span>13:00</span> Liverpool — Chelsea <b>1.85 / 3.60 / 4.20</b></div>
+      <div><span>15:30</span> Real Madrid — Barcelona <b>2.40 / 3.50 / 2.80</b></div>
+      <div><span>17:00</span> Boston Celtics — Miami Heat <b>1.75 / 3.50 / 4.10</b></div>
+    </div>
+  </section>
+
+  <aside class="right">
+    <div class="panel"><h3>🎟 BOLETIM DE APOSTAS <em id="count">0</em></h3><div id="slip">O teu boletim está vazio.<small>Clica numa cotação para adicionar uma seleção.</small></div><button class="primary full">VER TODOS OS JOGOS</button></div>
+    <div class="panel"><h3>O SALDO DA CONTA</h3><strong class="balance">0,00 €</strong><button class="deposit">Demo</button><hr><a>Minhas Apostas</a><a>Histórico de Apostas</a><a>Perfil</a><a>Promoções</a><a>Suporte</a></div>
+    <div class="bonus"><small>BÓNUS DE BOAS-VINDAS</small><strong>100%</strong><span>APENAS DEMONSTRAÇÃO</span></div>
+    <div class="responsible">🔞 <b>JOGA COM RESPONSABILIDADE</b><small>Este é um protótipo sem dinheiro real.</small></div>
+  </aside>
+</main>
+<footer>CHANGAI <b>BET</b> • PROTÓTIPO DEMO • Jogo responsável • Termos • Privacidade</footer>
 <script>
-function go(){let a=document.getElementById('nums').value.split(',').map(x=>parseFloat(x.trim())).filter(x=>isFinite(x)&&x>0);if(!a.length){document.getElementById('msg').innerHTML='<p class="red">Introduz números válidos.</p>';return}let s=a.reduce((x,y)=>x+y,0);document.getElementById('avg').textContent=(s/a.length).toFixed(2)+'x';document.getElementById('max').textContent=Math.max(...a).toFixed(2)+'x';document.getElementById('min').textContent=Math.min(...a).toFixed(2)+'x';document.getElementById('two').textContent=a.filter(x=>x>=2).length+' / '+a.length;document.getElementById('msg').innerHTML='<p>'+a.length+' resultados analisados.</p>';document.getElementById('hist').innerHTML=a.slice().reverse().map((x,i)=>'<tr><td>'+(i+1)+'</td><td>' + x.toFixed(2)+'x</td></tr>').join('')}
-</script></body></html>
+const slip=document.querySelector('#slip'), count=document.querySelector('#count');
+let selections=[];
+document.querySelectorAll('[data-odd]').forEach(btn=>btn.addEventListener('click',()=>{
+  selections.push(btn.dataset.odd);
+  count.textContent=selections.length;
+  slip.innerHTML='<strong>Seleções:</strong><small>'+selections.map((x,i)=>`Seleção ${i+1}: ${x}`).join('<br>')+'</small>';
+}));
+</script>
+</body>
+</html>
