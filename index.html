@@ -1,87 +1,957 @@
 <!doctype html>
 <html lang="pt-PT">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Changai Bet — Demo</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Changai Bet</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<header>
-  <div class="logo"><span>♛</span> CHANGAI <b>BET</b><small>A TUA APOSTA, O NOSSO COMPROMISSO</small></div>
-  <input class="search" placeholder="Procurar jogos, ligas ou equipas...">
-  <button>Entrar</button><button class="primary">Registar</button>
+
+<header class="topbar">
+  <div class="logo">
+    <span>♛</span> CHANGAI <b>BET</b>
+    <small>A TUA APOSTA, O NOSSO COMPROMISSO</small>
+  </div>
+
+  <input class="search" type="search"
+         placeholder="Procurar jogos, ligas ou equipas...">
+
+  <div class="account-buttons">
+    <button id="loginBtn">Entrar</button>
+    <button class="primary" id="registerBtn">Registar</button>
+  </div>
 </header>
-<nav>
-  <a class="active">⌂ Início</a><a>⚽ Futebol</a><a>🏀 Basquetebol</a><a>🎾 Ténis</a>
-  <a class="hot">✈ Aviator <i>HOT</i></a><a>🎮 eSports</a><a>🏓 Ténis de Mesa</a><a>🏐 Voleibol</a>
+
+<nav class="nav">
+  <a class="active">⌂ Início</a>
+  <a>⚽ Futebol</a>
+  <a>🏀 Basquetebol</a>
+  <a>🎾 Ténis</a>
+  <a class="hot">✈ Aviator <i>HOT</i></a>
+  <a>🎮 eSports</a>
+  <a>🏓 Ténis de Mesa</a>
+  <a>🏐 Voleibol</a>
 </nav>
+
 <main>
+
   <aside class="sidebar">
     <h3>DESPORTOS</h3>
-    <a>🔴 Ao Vivo</a><a>★ Em Destaque</a><a>⚽ Futebol</a><a>🏀 Basquetebol</a><a>🎾 Ténis</a>
-    <a>✈ Aviator <i>HOT</i></a><a>🎮 eSports</a><a>🏓 Ténis de Mesa</a><a>🏐 Voleibol</a><a>🥊 Boxe</a><a>🏎 Fórmula 1</a>
+
+    <a>🔴 Ao Vivo</a>
+    <a>★ Em Destaque</a>
+    <a>⚽ Futebol</a>
+    <a>🏀 Basquetebol</a>
+    <a>🎾 Ténis</a>
+    <a>✈ Aviator <i>HOT</i></a>
+    <a>🎮 eSports</a>
+    <a>🏓 Ténis de Mesa</a>
+    <a>🏐 Voleibol</a>
+    <a>🥊 Boxe</a>
+    <a>🏎 Fórmula 1</a>
     <a>••• Mais Desportos</a>
   </aside>
 
   <section class="content">
-    <div class="hero">
+
+    <section class="hero">
+
       <div>
         <div class="hero-logo">CHANGAI <b>BET</b></div>
+
         <h1>APOSTA EM TODOS OS MOMENTOS</h1>
-        <p>Futebol • Basquetebol • Ténis • Aviator • eSports</p>
-        <button class="primary">JOGAR AGORA</button>
+
+        <p>
+          Futebol • Basquetebol • Ténis • Aviator • eSports
+        </p>
+
+        <button class="primary big" id="heroRegister">
+          CRIAR CONTA
+        </button>
       </div>
-      <div class="aviator">✈ <strong>Aviator</strong><span>JOGA. MULTIPLICA. LEVANTA.</span></div>
-    </div>
+
+      <div class="aviator">
+        ✈
+        <strong>Aviator</strong>
+        <span>JOGA. MULTIPLICA. LEVANTA.</span>
+      </div>
+
+    </section>
 
     <div class="sports">
-      <div>⚽<b>Futebol</b><small>Ao vivo: 88</small></div>
-      <div>🏀<b>Basquetebol</b><small>Ao vivo: 18</small></div>
-      <div>🎾<b>Ténis</b><small>Ao vivo: 16</small></div>
-      <div>✈<b>Aviator</b><small>Jogo rápido</small></div>
-      <div>🎮<b>eSports</b><small>Ao vivo: 12</small></div>
+
+      <div>
+        ⚽
+        <b>Futebol</b>
+        <small>Ao vivo: 88</small>
+      </div>
+
+      <div>
+        🏀
+        <b>Basquetebol</b>
+        <small>Ao vivo: 18</small>
+      </div>
+
+      <div>
+        🎾
+        <b>Ténis</b>
+        <small>Ao vivo: 16</small>
+      </div>
+
+      <div>
+        ✈
+        <b>Aviator</b>
+        <small>Jogo rápido</small>
+      </div>
+
+      <div>
+        🎮
+        <b>eSports</b>
+        <small>Ao vivo: 12</small>
+      </div>
+
     </div>
 
-    <h2>🔴 APOSTAS AO VIVO <span>LIVE</span></h2>
+    <h2>
+      🔴 APOSTAS AO VIVO
+      <span>LIVE</span>
+    </h2>
+
     <div class="matches">
-      <div class="match"><div>🔴 56' <strong>Real Madrid vs Marseille</strong><small>Liga dos Campeões</small></div><button data-odd="1.45">1.45</button><button data-odd="4.60">4.60</button><button data-odd="6.20">6.20</button></div>
-      <div class="match"><div>🔴 32' <strong>Manchester City vs Arsenal</strong><small>Premier League</small></div><button data-odd="1.62">1.62</button><button data-odd="3.80">3.80</button><button data-odd="4.75">4.75</button></div>
-      <div class="match"><div>🔴 18' <strong>Lakers vs Golden State Warriors</strong><small>NBA</small></div><button data-odd="1.70">1.70</button><button data-odd="12.00">12.00</button><button data-odd="2.35">2.35</button></div>
-      <div class="match"><div>🔴 25' <strong>Djokovic vs Alcaraz</strong><small>ATP — Ténis</small></div><button data-odd="1.35">1.35</button><button data-odd="3.10">3.10</button></div>
+
+      <div class="match">
+        <div>
+          🔴 56'
+          <strong>Real Madrid vs Marseille</strong>
+          <small>Liga dos Campeões</small>
+        </div>
+
+        <button data-odd="1.45">1.45</button>
+        <button data-odd="4.60">4.60</button>
+        <button data-odd="6.20">6.20</button>
+      </div>
+
+      <div class="match">
+        <div>
+          🔴 32'
+          <strong>Manchester City vs Arsenal</strong>
+          <small>Premier League</small>
+        </div>
+
+        <button data-odd="1.62">1.62</button>
+        <button data-odd="3.80">3.80</button>
+        <button data-odd="4.75">4.75</button>
+      </div>
+
+      <div class="match">
+        <div>
+          🔴 18'
+          <strong>Lakers vs Golden State Warriors</strong>
+          <small>NBA</small>
+        </div>
+
+        <button data-odd="1.70">1.70</button>
+        <button data-odd="12.00">12.00</button>
+        <button data-odd="2.35">2.35</button>
+      </div>
+
+      <div class="match">
+        <div>
+          🔴 25'
+          <strong>Djokovic vs Alcaraz</strong>
+          <small>ATP — Ténis</small>
+        </div>
+
+        <button data-odd="1.35">1.35</button>
+        <button data-odd="3.10">3.10</button>
+      </div>
+
     </div>
 
     <div class="tiles">
-      <div>🎰 <strong>CASINO DEMO</strong><small>Jogos de demonstração</small></div>
-      <div>✈ <strong>AVIATOR</strong><small>Voa alto!</small></div>
-      <div>🎰 <strong>SLOTS DEMO</strong><small>Experiência fictícia</small></div>
-      <div>🎮 <strong>eSPORTS</strong><small>Competições</small></div>
+
+      <div>
+        🎰
+        <strong>CASINO DEMO</strong>
+        <small>Jogos de demonstração</small>
+      </div>
+
+      <div>
+        ✈
+        <strong>AVIATOR</strong>
+        <small>Jogo de demonstração</small>
+      </div>
+
+      <div>
+        🎰
+        <strong>SLOTS DEMO</strong>
+        <small>Experiência fictícia</small>
+      </div>
+
+      <div>
+        🎮
+        <strong>eSPORTS</strong>
+        <small>Competições</small>
+      </div>
+
     </div>
 
     <h2>PRÓXIMOS JOGOS</h2>
+
     <div class="upcoming">
-      <div><span>13:00</span> Liverpool — Chelsea <b>1.85 / 3.60 / 4.20</b></div>
-      <div><span>15:30</span> Real Madrid — Barcelona <b>2.40 / 3.50 / 2.80</b></div>
-      <div><span>17:00</span> Boston Celtics — Miami Heat <b>1.75 / 3.50 / 4.10</b></div>
+
+      <div>
+        <span>13:00</span>
+        Liverpool — Chelsea
+        <b>1.85 / 3.60 / 4.20</b>
+      </div>
+
+      <div>
+        <span>15:30</span>
+        Real Madrid — Barcelona
+        <b>2.40 / 3.50 / 2.80</b>
+      </div>
+
+      <div>
+        <span>17:00</span>
+        Boston Celtics — Miami Heat
+        <b>1.75 / 3.50 / 4.10</b>
+      </div>
+
     </div>
+
   </section>
 
   <aside class="right">
-    <div class="panel"><h3>🎟 BOLETIM DE APOSTAS <em id="count">0</em></h3><div id="slip">O teu boletim está vazio.<small>Clica numa cotação para adicionar uma seleção.</small></div><button class="primary full">VER TODOS OS JOGOS</button></div>
-    <div class="panel"><h3>O SALDO DA CONTA</h3><strong class="balance">0,00 €</strong><button class="deposit">Demo</button><hr><a>Minhas Apostas</a><a>Histórico de Apostas</a><a>Perfil</a><a>Promoções</a><a>Suporte</a></div>
-    <div class="bonus"><small>BÓNUS DE BOAS-VINDAS</small><strong>100%</strong><span>APENAS DEMONSTRAÇÃO</span></div>
-    <div class="responsible">🔞 <b>JOGA COM RESPONSABILIDADE</b><small>Este é um protótipo sem dinheiro real.</small></div>
+
+    <div class="panel">
+
+      <h3>
+        🎟 BOLETIM DE APOSTAS
+        <em id="count">0</em>
+      </h3>
+
+      <div id="slip">
+        O teu boletim está vazio.
+        <small>
+          Clica numa cotação para adicionar uma seleção.
+        </small>
+      </div>
+
+      <button class="primary full">
+        VER TODOS OS JOGOS
+      </button>
+
+    </div>
+
+    <div class="panel">
+
+      <h3>O SALDO DA CONTA</h3>
+
+      <strong class="balance">0,00 €</strong>
+
+      <div class="account-status" id="accountStatus">
+        Não estás autenticado
+      </div>
+
+      <hr>
+
+      <a>Minhas Apostas</a>
+      <a>Histórico de Apostas</a>
+      <a>Perfil</a>
+      <a>Promoções</a>
+      <a>Suporte</a>
+
+    </div>
+
+    <div class="bonus">
+      <small>BÓNUS DE BOAS-VINDAS</small>
+      <strong>100%</strong>
+      <span>APENAS DEMONSTRAÇÃO</span>
+    </div>
+
+    <div class="responsible">
+      🔞
+      <b>JOGA COM RESPONSABILIDADE</b>
+
+      <small>
+        Este protótipo não movimenta dinheiro real.
+      </small>
+    </div>
+
   </aside>
+
 </main>
-<footer>CHANGAI <b>BET</b> • PROTÓTIPO DEMO • Jogo responsável • Termos • Privacidade</footer>
+
+<footer>
+  CHANGAI <b>BET</b>
+  • PROTÓTIPO
+  • Jogo responsável
+  • Termos
+  • Privacidade
+</footer>
+
+
+<!-- =========================
+     MODAL DE AUTENTICAÇÃO
+========================= -->
+
+<div class="modal" id="authModal">
+
+  <div class="auth-box">
+
+    <button class="close" id="closeAuth">×</button>
+
+    <div class="auth-logo">
+      CHANGAI <b>BET</b>
+    </div>
+
+    <div class="auth-tabs">
+
+      <button id="tabLogin" class="tab active-tab">
+        Entrar
+      </button>
+
+      <button id="tabRegister" class="tab">
+        Criar conta
+      </button>
+
+    </div>
+
+
+    <!-- LOGIN -->
+
+    <form id="loginForm">
+
+      <h2>Entrar na tua conta</h2>
+
+      <p class="auth-description">
+        Acede à tua conta Changai Bet.
+      </p>
+
+      <label>E-mail</label>
+
+      <input
+        id="loginEmail"
+        type="email"
+        placeholder="teuemail@email.com"
+        required
+      >
+
+      <label>Palavra-passe</label>
+
+      <div class="password-field">
+
+        <input
+          id="loginPassword"
+          type="password"
+          placeholder="Palavra-passe"
+          required
+        >
+
+        <button type="button" class="show-password"
+                data-target="loginPassword">
+          👁
+        </button>
+
+      </div>
+
+      <button type="submit" class="primary auth-submit">
+        ENTRAR
+      </button>
+
+      <button type="button" class="forgot" id="forgotPassword">
+        Esqueci-me da palavra-passe
+      </button>
+
+      <div class="auth-message" id="loginMessage"></div>
+
+    </form>
+
+
+    <!-- REGISTO -->
+
+    <form id="registerForm" class="hidden">
+
+      <h2>Criar a tua conta</h2>
+
+      <p class="auth-description">
+        Preenche os dados para criar uma conta.
+      </p>
+
+      <label>Nome completo</label>
+
+      <input
+        id="registerName"
+        type="text"
+        placeholder="O teu nome"
+        required
+      >
+
+      <label>E-mail</label>
+
+      <input
+        id="registerEmail"
+        type="email"
+        placeholder="teuemail@email.com"
+        required
+      >
+
+      <label>Telefone</label>
+
+      <input
+        id="registerPhone"
+        type="tel"
+        placeholder="+244 9XX XXX XXX"
+        required
+      >
+
+      <label>Data de nascimento</label>
+
+      <input
+        id="registerBirth"
+        type="date"
+        required
+      >
+
+      <label>Palavra-passe</label>
+
+      <div class="password-field">
+
+        <input
+          id="registerPassword"
+          type="password"
+          placeholder="Mínimo 8 caracteres"
+          minlength="8"
+          required
+        >
+
+        <button type="button" class="show-password"
+                data-target="registerPassword">
+          👁
+        </button>
+
+      </div>
+
+      <label>Confirmar palavra-passe</label>
+
+      <input
+        id="registerConfirm"
+        type="password"
+        placeholder="Repete a palavra-passe"
+        minlength="8"
+        required
+      >
+
+      <label class="check">
+
+        <input id="terms" type="checkbox" required>
+
+        <span>
+          Aceito os Termos e a Política de Privacidade.
+        </span>
+
+      </label>
+
+      <button type="submit" class="primary auth-submit">
+        CRIAR CONTA
+      </button>
+
+      <div class="auth-message" id="registerMessage"></div>
+
+    </form>
+
+  </div>
+
+</div>
+
+
 <script>
-const slip=document.querySelector('#slip'), count=document.querySelector('#count');
-let selections=[];
-document.querySelectorAll('[data-odd]').forEach(btn=>btn.addEventListener('click',()=>{
-  selections.push(btn.dataset.odd);
-  count.textContent=selections.length;
-  slip.innerHTML='<strong>Seleções:</strong><small>'+selections.map((x,i)=>`Seleção ${i+1}: ${x}`).join('<br>')+'</small>';
-}));
+
+/* =========================
+   ELEMENTOS
+========================= */
+
+const authModal = document.getElementById("authModal");
+
+const loginBtn = document.getElementById("loginBtn");
+const registerBtn = document.getElementById("registerBtn");
+const heroRegister = document.getElementById("heroRegister");
+
+const closeAuth = document.getElementById("closeAuth");
+
+const tabLogin = document.getElementById("tabLogin");
+const tabRegister = document.getElementById("tabRegister");
+
+const loginForm = document.getElementById("loginForm");
+const registerForm = document.getElementById("registerForm");
+
+const loginMessage = document.getElementById("loginMessage");
+const registerMessage = document.getElementById("registerMessage");
+
+const accountStatus = document.getElementById("accountStatus");
+
+
+/* =========================
+   ABRIR / FECHAR
+========================= */
+
+function openAuth(mode = "login") {
+
+  authModal.classList.add("show");
+
+  if (mode === "register") {
+    showRegister();
+  } else {
+    showLogin();
+  }
+}
+
+function closeModal() {
+  authModal.classList.remove("show");
+}
+
+loginBtn.addEventListener("click", () => {
+  openAuth("login");
+});
+
+registerBtn.addEventListener("click", () => {
+  openAuth("register");
+});
+
+heroRegister.addEventListener("click", () => {
+  openAuth("register");
+});
+
+closeAuth.addEventListener("click", closeModal);
+
+
+/* Fechar ao clicar fora */
+
+authModal.addEventListener("click", (event) => {
+
+  if (event.target === authModal) {
+    closeModal();
+  }
+
+});
+
+
+/* =========================
+   TABS
+========================= */
+
+function showLogin() {
+
+  loginForm.classList.remove("hidden");
+  registerForm.classList.add("hidden");
+
+  tabLogin.classList.add("active-tab");
+  tabRegister.classList.remove("active-tab");
+
+}
+
+function showRegister() {
+
+  loginForm.classList.add("hidden");
+  registerForm.classList.remove("hidden");
+
+  tabLogin.classList.remove("active-tab");
+  tabRegister.classList.add("active-tab");
+
+}
+
+tabLogin.addEventListener("click", showLogin);
+tabRegister.addEventListener("click", showRegister);
+
+
+/* =========================
+   MOSTRAR PALAVRA-PASSE
+========================= */
+
+document.querySelectorAll(".show-password").forEach(button => {
+
+  button.addEventListener("click", () => {
+
+    const target = document.getElementById(
+      button.dataset.target
+    );
+
+    if (target.type === "password") {
+      target.type = "text";
+      button.textContent = "🙈";
+    } else {
+      target.type = "password";
+      button.textContent = "👁";
+    }
+
+  });
+
+});
+
+
+/* =========================
+   BASE LOCAL DE DEMONSTRAÇÃO
+========================= */
+
+function getUsers() {
+
+  return JSON.parse(
+    localStorage.getItem("changaiBetUsers") || "[]"
+  );
+
+}
+
+function saveUsers(users) {
+
+  localStorage.setItem(
+    "changaiBetUsers",
+    JSON.stringify(users)
+  );
+
+}
+
+
+/* =========================
+   CRIAR CONTA
+========================= */
+
+registerForm.addEventListener("submit", (event) => {
+
+  event.preventDefault();
+
+  registerMessage.textContent = "";
+  registerMessage.className = "auth-message";
+
+  const name =
+    document.getElementById("registerName").value.trim();
+
+  const email =
+    document.getElementById("registerEmail").value.trim().toLowerCase();
+
+  const phone =
+    document.getElementById("registerPhone").value.trim();
+
+  const birth =
+    document.getElementById("registerBirth").value;
+
+  const password =
+    document.getElementById("registerPassword").value;
+
+  const confirm =
+    document.getElementById("registerConfirm").value;
+
+  const terms =
+    document.getElementById("terms").checked;
+
+
+  /* Validar idade */
+
+  const birthDate = new Date(birth);
+  const today = new Date();
+
+  let age =
+    today.getFullYear() - birthDate.getFullYear();
+
+  const month =
+    today.getMonth() - birthDate.getMonth();
+
+  if (
+    month < 0 ||
+    (month === 0 &&
+     today.getDate() < birthDate.getDate())
+  ) {
+    age--;
+  }
+
+
+  if (age < 18) {
+
+    showMessage(
+      registerMessage,
+      "É necessário ter pelo menos 18 anos.",
+      "error"
+    );
+
+    return;
+  }
+
+
+  if (password.length < 8) {
+
+    showMessage(
+      registerMessage,
+      "A palavra-passe deve ter pelo menos 8 caracteres.",
+      "error"
+    );
+
+    return;
+  }
+
+
+  if (password !== confirm) {
+
+    showMessage(
+      registerMessage,
+      "As palavras-passe não coincidem.",
+      "error"
+    );
+
+    return;
+  }
+
+
+  if (!terms) {
+
+    showMessage(
+      registerMessage,
+      "Aceita os termos para continuar.",
+      "error"
+    );
+
+    return;
+  }
+
+
+  const users = getUsers();
+
+
+  if (users.some(user => user.email === email)) {
+
+    showMessage(
+      registerMessage,
+      "Este e-mail já possui uma conta.",
+      "error"
+    );
+
+    return;
+  }
+
+
+  const newUser = {
+
+    id:
+      "CB-" +
+      Date.now(),
+
+    name,
+    email,
+    phone,
+    birth,
+
+    /* Apenas demonstração local.
+       Nunca usar isto assim num sistema real. */
+    password,
+
+    status: "pending",
+
+    createdAt:
+      new Date().toISOString()
+
+  };
+
+
+  users.push(newUser);
+
+  saveUsers(users);
+
+
+  showMessage(
+    registerMessage,
+    "Conta criada com sucesso! Agora podes entrar.",
+    "success"
+  );
+
+
+  setTimeout(() => {
+
+    loginForm.reset();
+
+    document.getElementById("loginEmail").value = email;
+
+    showLogin();
+
+  }, 1200);
+
+});
+
+
+/* =========================
+   LOGIN
+========================= */
+
+loginForm.addEventListener("submit", (event) => {
+
+  event.preventDefault();
+
+  loginMessage.textContent = "";
+  loginMessage.className = "auth-message";
+
+  const email =
+    document.getElementById("loginEmail")
+      .value.trim()
+      .toLowerCase();
+
+  const password =
+    document.getElementById("loginPassword")
+      .value;
+
+
+  const users = getUsers();
+
+  const user = users.find(
+    item =>
+      item.email === email &&
+      item.password === password
+  );
+
+
+  if (!user) {
+
+    showMessage(
+      loginMessage,
+      "E-mail ou palavra-passe incorretos.",
+      "error"
+    );
+
+    return;
+  }
+
+
+  localStorage.setItem(
+    "changaiBetSession",
+    JSON.stringify({
+      userId: user.id,
+      name: user.name,
+      email: user.email
+    })
+  );
+
+
+  showMessage(
+    loginMessage,
+    "Entrada efetuada com sucesso!",
+    "success"
+  );
+
+
+  updateAccount();
+
+
+  setTimeout(() => {
+    closeModal();
+  }, 900);
+
+});
+
+
+/* =========================
+   MENSAGENS
+========================= */
+
+function showMessage(element, text, type) {
+
+  element.textContent = text;
+
+  element.className =
+    "auth-message " + type;
+
+}
+
+
+/* =========================
+   ESTADO DA CONTA
+========================= */
+
+function updateAccount() {
+
+  const session =
+    JSON.parse(
+      localStorage.getItem("changaiBetSession") || "null"
+    );
+
+
+  if (!session) {
+
+    accountStatus.textContent =
+      "Não estás autenticado";
+
+    return;
+
+  }
+
+
+  accountStatus.innerHTML =
+    "👤 " + session.name +
+    "<br><small>Conta criada • modo demonstração</small>";
+
+}
+
+
+/* =========================
+   RECUPERAÇÃO DEMO
+========================= */
+
+document
+  .getElementById("forgotPassword")
+  .addEventListener("click", () => {
+
+    alert(
+      "A recuperação de palavra-passe será ligada ao sistema de e-mail na próxima etapa."
+    );
+
+  });
+
+
+/* =========================
+   BOLETIM
+========================= */
+
+const slip =
+  document.getElementById("slip");
+
+const count =
+  document.getElementById("count");
+
+let selections = [];
+
+
+document
+  .querySelectorAll("[data-odd]")
+  .forEach(button => {
+
+    button.addEventListener("click", () => {
+
+      selections.push(button.dataset.odd);
+
+      count.textContent =
+        selections.length;
+
+      slip.innerHTML =
+        "<strong>Seleções:</strong>" +
+        "<small>" +
+        selections
+          .map(
+            (odd, index) =>
+              `Seleção ${index + 1}: ${odd}`
+          )
+          .join("<br>") +
+        "</small>";
+
+    });
+
+  });
+
+
+/* =========================
+   INICIAR
+========================= */
+
+updateAccount();
+
 </script>
+
 </body>
 </html>
